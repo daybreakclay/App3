@@ -1,0 +1,79 @@
+﻿<Page
+    x:Class="App3.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App3"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <MediaElement x:Name="freightTrain_MediaElement"
+                      HorizontalAlignment="Center" 
+                      VerticalAlignment="Center" 
+                      AudioCategory="Movie" 
+                      Source="/Assets/freight_train.mp4"
+                      AutoPlay="False"
+                      MediaEnded="freighttrain_MediaElement_MediaEnded" 
+                      Width="Auto" 
+                      Height="Auto" />
+        <Button Content="" 
+                HorizontalAlignment="Right" 
+                VerticalAlignment="Bottom"
+                Click="PlayFreightTrain_Click" MinWidth="1000" MinHeight="804" Opacity="0"
+                
+                />
+
+        <MediaElement x:Name="bradGuitar_MediaElement"
+                      HorizontalAlignment="Center"
+                      VerticalAlignment="Center"
+                      Source="/Assets/brad-guitar.mp4"
+                      AutoPlay="False" 
+                      Grid.Row="1"/>
+        <Button Content="" 
+                HorizontalAlignment="Right" 
+                VerticalAlignment="Top"
+                Click="PlayBradGuitar_Click" Grid.Row="1" MinWidth="1000" MinHeight="800" Opacity="0"/>
+
+        <MediaElement x:Name="kathyMov_MediaElement"
+                      HorizontalAlignment="Center" 
+                      VerticalAlignment="Center"
+                      Source="/Assets/kathy-mov.mp4"
+                      AutoPlay="False" 
+                      Grid.Column="1" 
+                      Grid.Row="1" 
+                      Margin="0,0,0,0"/>
+        <Button Content="" 
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Click="PlayKathyMov_Click" 
+                Grid.Column="1"
+                Grid.Row="1" MinWidth="1000" MinHeight="800" Opacity="0"/>
+
+        <MediaElement x:Name="wagonWheel_MediaElement"
+                      HorizontalAlignment="Center"
+                      VerticalAlignment="Center"
+                      Source="/Assets/wagon_wheel.mp4"
+                      AutoPlay="False" 
+                      Grid.Column="1" 
+                      Margin="0,0,0,0"/>
+        <Button Content="" 
+                HorizontalAlignment="Left"
+                VerticalAlignment="Bottom"
+                Click="PlayWagonWheel_Click"
+                Grid.Column="1" MinWidth="1000" MinHeight="800" Opacity="0"/>
+
+
+
+    </Grid>
+</Page>
